@@ -11,5 +11,7 @@ export const iconSetsLoaders: { [key: string]: AsyncIconsLoader } = {
     linea: () => import('react-icons-kit/linea'),
     ionicons: () => import('react-icons-kit/ionicons'),
     oct: () => import('react-icons-kit/oct'),
-    typicons: () => import('react-icons-kit/typicons')
+    entypo: () => import('react-icons-kit/entypo'),
+    "noto_emoji_regular": () => import('react-icons-kit/noto_emoji_regular'),
+
 }

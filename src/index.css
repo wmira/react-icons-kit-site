@@ -1,21 +1,16 @@
-
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 html, body {
   margin: 0;
   padding: 0px;
   width: 100%;
   height: 100%;
-  font-size: 16px;        
-  font-family: 'Open Sans', sans-serif;   
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;   
+  color: #13293D;
 }
 
-#root {
-
-}
 * {
   box-sizing: border-box;
 }
 
-.prism-code {
-  background: #474949 !important;
-}

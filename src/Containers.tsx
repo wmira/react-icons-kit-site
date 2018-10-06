@@ -4,7 +4,8 @@ import styled from 'styled-components'
 import { Colors } from './colors'
 
 export const Title = styled.h2`
-    color: ${Colors.title}
+    color: ${Colors.title};
+    padding: 16px 0px;
 `
 
 export const IconSetContainer = styled.div`
@@ -16,6 +17,7 @@ export const IconSetContainer = styled.div`
 
 
 export const IconView = styled.div`
+    color: #717e8a;
     width: 140px;
     padding: 10px 4px;
     justify-content: center;
@@ -43,7 +45,7 @@ export const IconTitle = styled.div`
 
 export const StaticCodeContainer = styled.div`    
     width: 100%;
-    font-size: 0.9em;
+    font-size: 0.9em;    
 `
 
 export const StaticCode = styled.div`    

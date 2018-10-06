@@ -44,7 +44,7 @@ export class App extends Component<{}, IAppState> {
                       <a className="github-button" href={`${BASE_APP_URL}/fork`} 
                         data-icon="octicon-repo-forked" data-size="large" 
                         data-show-count="true" 
-                        aria-label="Fork ntkme/github-buttons on GitHub">Fork</a>
+                        aria-label="Fork wmira/react-icons-kit on GitHub">Fork</a>
                     </InlineItems>
                   </Center>
                 </div>

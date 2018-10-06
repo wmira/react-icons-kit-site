@@ -10,6 +10,7 @@ import { rainbow as theme } from 'react-syntax-highlighter/styles/hljs';
 import { Icon } from 'react-icons-kit'
 // @ts-ignore
 import { home } from 'react-icons-kit/icomoon/home'
+import { Colors } from './colors'
 
 // @ts-ignore
 import {
@@ -45,7 +46,11 @@ const Install = () => {
 const CodeViewer = (props: { code: string, width?: string }) => (
     <StaticCodeContainer>                    
         <StaticCode width={props.width}>
-            <SyntaxHighlighter showLineNumbers={true} language='javascript' style={theme}>{props.code}</SyntaxHighlighter>
+            <SyntaxHighlighter 
+                customStyle={{fontSize: '0.82em',background: `${Colors.foreground}`}} 
+                showLineNumbers={true} language='javascript' 
+                style={theme}>{props.code}
+            </SyntaxHighlighter>
         </StaticCode>
     </StaticCodeContainer>
 )

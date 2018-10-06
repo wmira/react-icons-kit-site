@@ -18,8 +18,7 @@ export const Container = styled.div`
 
 const HeaderContainer = styled.div`
     position: fixed;
-    left: 0;
-    box-sizing: border-box;
+    left: 0;    
     z-index: 3;
     width: 100%;
     height: 62px;
@@ -27,6 +26,7 @@ const HeaderContainer = styled.div`
     color: #FFF;
     font-weight: bold;
     padding: 10px;    
+    
 `
 HeaderContainer.displayName = 'HeaderContainer'
 
@@ -50,17 +50,15 @@ const Content = styled.div`
     max-width: 100%;
     padding: 62px 24px 24px 24px;
 `
-
-
 export interface IContainerProps {
     children: ReactNode
 }
 
-export const HeaderText = styled.div`
-    letter-spacing: 3px;
-    font-weight: bold;
-    font-size: 1.4em
+export const HeaderText = styled.div`        
+    font-size: 1em;
+    letter-spacing: 2px;
     padding-left: 12px;
+    text-transform: uppercase;
 `
 
 

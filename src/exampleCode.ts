@@ -32,16 +32,16 @@ export const HomeIcon3 = () => <SideIconContainer icon={home3}/>
 
 export const basicUsage = `
 
-<Center>
-    <InlineItems>
-        <Icon icon={home} />
-        <Icon size={32} icon={home} />
-        <Icon size={64} icon={home} />
+<InlineItems>
+    <Center><Icon icon={home} /></Center>
+    <Center><Icon size={32} icon={home} /></Center>
+    <Center><Icon size={64} icon={home} /></Center>
+    <Center>
         <div style={{width: 24, height: 24}}>
             <Icon size={'100%'} icon={home}/>
         </div>
-    </InlineItems>
-</Center>
+    </Center>
+</InlineItems>
 
 `
 export const changingColors = `

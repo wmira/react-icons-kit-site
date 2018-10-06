@@ -1,39 +1,47 @@
 
 import * as React from 'react'
 
-import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
+import { Nav } from 'react-sidenav'
+import { withRR4 } from 'react-sidenav/withRR4'
 import { IIconSetMap } from './state'
 
+const Section = styled.div`
+    font-size: 0.9em;
+    padding: 8px 14px;
+    text-transform: uppercase;
+    color: #247BA0;
+    font-weight: bold;
+`
+const Text = styled.div`
+    font-size: 0.9em;
+`
 
-const Item = styled.div`
-    margin: 8px 22px;
-`
-const IconLinkContainer = styled.div`
-    padding: 6px;
-    & > a {
-        color: inherit;
-        text-decoration: none;
-        cursor: pointer;
-    }
-`
+
+const SideNav = withRR4()
+
 export interface INavigationProps {
     iconsets: IIconSetMap
 }
 
+
+
 export const Navigation = (props: INavigationProps) => (
-    <div>
-        <Item><IconLinkContainer><Link to='/guide'>Installation and Usage</Link></IconLinkContainer></Item>
-        <Item>Icons</Item>
-        <div style={{paddingLeft: 36}}>
-            {
-                Object.keys(props.iconsets).map( iconSet => {
-                    const { title, module } = props.iconsets[iconSet]
-                    return <IconLinkContainer key={module}><Link to={`/iconset/${module}`}>{title}</Link></IconLinkContainer>
-                })
-            }
-        </div>
-    </div>
+    <SideNav defaultSelectedPath={'guide'} theme={{selectionColor: '#1B98E0', hoverColor: '#1B98E0'}}>
+        <Section>Main</Section>
+        <Nav id={'guide'} payload={{to: '/guide'}}><Text>Installation and Usage</Text></Nav>
+        <Section>Icons</Section>
+        {
+            Object.keys(props.iconsets).map( iconSet => {
+                const { title, module } = props.iconsets[iconSet]
+                return (
+                    <Nav key={module} id={module} payload={{ to: `/iconset/${module}`}}>
+                        <Text>{title}</Text>
+                    </Nav>
+                )
+            })
+        }        
+    </SideNav>
 )
 
