@@ -95,7 +95,7 @@ export const AppContainer = (props: IAppContainerProps) => {
     return (
         <Root>
             <Container>
-                <div>
+                <div >
                     <HeaderContainer>
                         { headerElement.props.children }
                     </HeaderContainer>

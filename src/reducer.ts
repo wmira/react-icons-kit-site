@@ -25,8 +25,7 @@ export const reducer = (state: Readonly<IAppState>, action: Readonly<Action<any>
   const { type } = action
 
   if ( type === SET_SELECTED_ICONSET ) {    
-    const { payload: selectedIconSet } = action as SetSelectedIconSetAction
-    console.log('settig selected icon SEt here ', selectedIconSet)
+    const { payload: selectedIconSet } = action as SetSelectedIconSetAction    
     return { ...state, selectedIconSet }
   }
 
@@ -43,8 +42,7 @@ export const reducer = (state: Readonly<IAppState>, action: Readonly<Action<any>
   }
 
   if ( type === SET_SELECTED_ICON_FROMSET ) {
-    const { payload: setSelectedIconFromSet } = action as SetSelectedIconFromSet
-    console.log('setting selected icon from set ', setSelectedIconFromSet)
+    const { payload: setSelectedIconFromSet } = action as SetSelectedIconFromSet    
     return {
       ...state,
       selectedIconFromSet: {

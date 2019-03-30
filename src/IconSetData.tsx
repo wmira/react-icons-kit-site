@@ -53,8 +53,7 @@ export const IconSetData = () => {
   const dispatch = React.useContext(DispatchContext)
 
   const onIconSelected = React.useCallback(
-    (e: React.MouseEvent<HTMLDivElement> ) => {
-      console.log('on icon clicked')
+    (e: React.MouseEvent<HTMLDivElement> ) => {      
       const selection = getSelectionData(e.currentTarget)
       if ( selection ) {        
         dispatch<SetSelectedIconFromSet>({ type: SET_SELECTED_ICON_FROMSET, payload: selection })

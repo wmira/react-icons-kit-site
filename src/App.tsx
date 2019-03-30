@@ -1,6 +1,6 @@
 import * as React from 'react'
-
-import { Center, InlineItems, LeftRightSection } from 'react-containers'
+import styled from 'styled-components'
+import { Center, InlineItems, LeftRightSection as BLeftRightSection } from 'react-containers'
 import { match as MatchType} from 'react-router'
 import { Route, Switch } from 'react-router-dom'
 
@@ -9,6 +9,12 @@ import { Guide } from './Guide'
 import { Navigation } from './Navigation'
 import { Dispatch, INITIAL_STATE } from './state'
 
+const LeftRightSection = styled.div`
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+`
 
 const BASE_APP_URL = `https://github.com/wmira/react-icons-kit`
 
@@ -29,7 +35,7 @@ export const App: React.FC = () => {
       <DispatchContext.Provider value={dispatch as Dispatch}>
         <AppContainer>
           <Header>
-            <LeftRightSection>
+            <LeftRightSection style={{height: '100%'}}>
                 <div><Center><HeaderText>React Icons Kit</HeaderText></Center></div>
                 <div>
                   <Center>
