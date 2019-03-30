@@ -8,8 +8,8 @@ import App from './App'
 export const createApp = (): ReactElement<Router> => {
 
     return (       
-        <Router basename="/react-icons-kit">
-            <Route path='/' component={App} />
+        <Router>
+          <Route path='/' component={App} />
         </Router>          
     )
 }

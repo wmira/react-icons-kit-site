@@ -63,8 +63,8 @@ export const changingColors = `
 `
 
 export const composeIcon = `
-
 // import { HomeIcon1, HomeIcon2, HomeIcon 3} from ...
+
 <Center>
     <div>
         <div><HomeIcon1/></div>
