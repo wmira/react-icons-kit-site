@@ -1,17 +1,13 @@
 
-// import 'prismjs/components/prism-javascript'
-// import 'prismjs/components/prism-jsx'
-// import 'prismjs/components/prism-markup'
-// import 'prismjs/themes/prism-tomorrow.css'
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
 import { createApp } from './createApp'
 import './index.css'
 
-const App: React.ReactElement<any> = createApp()
+const app: React.ReactElement<any> = createApp()
 
 ReactDOM.render(
-  App,
+  app,
   document.getElementById('root') as HTMLElement
 );

@@ -1,3 +1,5 @@
+import * as React from 'react'
+import { Action } from './reducer'
 export enum IconSetEnum {
     icomoon = 'icomoon',
     md = 'md',
@@ -11,7 +13,7 @@ export enum IconSetEnum {
     oct = 'oct',
     typicons = 'typicons',
     noto_emoji_regular = 'noto_emoji_regular',
-    feather = 'feather'
+    feather = 'feather'    
 }
 
 export const ICON_SETS: IIconSetMap = {
@@ -42,8 +44,8 @@ export interface IIconSetMap {
 export interface IAppState {
     iconsets: IIconSetMap
     selectedIconSet: string
-    loadedIconSetData: { IconSet: any } | {}
-    selectedIconFromSet: { IconSet: string } | {}
+    loadedIconSetData: { [ key: string ]: any } 
+    selectedIconFromSet: { [key: string]: string }
 }
 
 export const INITIAL_STATE: IAppState = {
@@ -52,3 +54,8 @@ export const INITIAL_STATE: IAppState = {
     loadedIconSetData: {}, 
     selectedIconFromSet: {} 
 }
+
+export type Dispatch = <A>(action: A) => void
+
+export const DispatchContext = React.createContext<Dispatch>(null as any)
+export const Context = React.createContext<IAppState>(null as any as IAppState)
