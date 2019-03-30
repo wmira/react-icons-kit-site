@@ -5,21 +5,12 @@ import md from 'react-markings'
 // @ts-ignore
 import SyntaxHighlighter from 'react-syntax-highlighter'
 // @ts-ignore
-import { rainbow as theme } from 'react-syntax-highlighter/styles/hljs';
+import { rainbow as theme } from 'react-syntax-highlighter/dist/styles/hljs';
 
 import { Icon } from 'react-icons-kit'
 // @ts-ignore
 import { home } from 'react-icons-kit/icomoon/home'
 import { Colors } from './colors'
-
-// @ts-ignore
-import {
-    LiveEditor,
-    LiveError,
-    LivePreview,
-    LiveProvider
-  } from 'react-live'
-
 
 import { HomeIcon1, HomeIcon2, HomeIcon3 } from './compose'
 import { Title } from './Containers'
