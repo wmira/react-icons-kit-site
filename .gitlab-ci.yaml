@@ -1,0 +1,22 @@
+image: node:10.15-alpine
+
+cache:
+  paths:  
+  - dist
+
+stages:
+    - build
+    - publish
+
+build:        
+    stage: build    
+    script:
+        - npm ci
+
+npm_publish:        
+    stage: publish
+    only:
+        - master
+    script:        
+      - npm install -g now
+      - now --token=${NOW_TOKEN}
