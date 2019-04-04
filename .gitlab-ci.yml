@@ -18,5 +18,5 @@ npm_publish:
     only:
         - master
     script:        
-      - npm install -g now
+      - npm i -g --unsafe-perm now
       - now --token=${NOW_TOKEN}
