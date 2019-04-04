@@ -2,7 +2,7 @@ image: node:10.15-alpine
 
 cache:
   paths:  
-  - dist
+  - build
 
 stages:
     - build
@@ -12,11 +12,14 @@ build:
     stage: build    
     script:
         - npm ci
+        - npm run build
 
 npm_publish:        
     stage: publish
     only:
         - master
     script:        
+      - cp now.json build
       - npm i -g --unsafe-perm now
+      - cd build
       - now --token=${NOW_TOKEN}
