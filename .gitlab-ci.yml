@@ -18,4 +18,5 @@ npm_publish:
     only:
         - master
     script:        
-        - npx now --token=${NOW_TOKEN}
+      - npm install -g now
+      - now --token=${NOW_TOKEN}
