@@ -6,6 +6,7 @@ import { SET_SELECTED_ICONSET, SET_ICONSET_DATA, SetIconSetDataAction } from './
 import { iconSetsLoaders } from './loadIconSets'
 import { IconSet } from './IconSet';
 
+
 /**
  * 
  * @param props 
@@ -23,7 +24,9 @@ export const IconSetView: React.FC<RouteComponentProps> = (props) => {
     React.useCallback(() => {
       const loadIconSet = async () => {            
         const iconSetLoader = iconSetsLoaders[paramIconSet]
-        const iconSetData = await iconSetLoader()                
+        console.log("iconset data ", iconSetLoader, paramIconSet)      
+        const iconSetData = await iconSetLoader()          
+        
         dispatch<SetIconSetDataAction>({ type: SET_ICONSET_DATA, payload: { iconSet: paramIconSet, data: iconSetData }  })
         
       }  
