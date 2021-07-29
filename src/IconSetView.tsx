@@ -23,8 +23,7 @@ export const IconSetView: React.FC<RouteComponentProps> = (props) => {
   React.useEffect(
     React.useCallback(() => {
       const loadIconSet = async () => {            
-        const iconSetLoader = iconSetsLoaders[paramIconSet]
-        console.log("iconset data ", iconSetLoader, paramIconSet)      
+        const iconSetLoader = iconSetsLoaders[paramIconSet]        
         const iconSetData = await iconSetLoader()          
         
         dispatch<SetIconSetDataAction>({ type: SET_ICONSET_DATA, payload: { iconSet: paramIconSet, data: iconSetData }  })
