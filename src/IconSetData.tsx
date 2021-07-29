@@ -17,7 +17,6 @@ interface IconContainerProps {
 const getSelectionData = (target: HTMLDivElement): { selectedIcon: string, iconSet: string } | undefined  => {
                 
   let targetWithData: HTMLElement | null = target
-
   while ( targetWithData ) {
       
     if ( targetWithData.getAttribute('data-icon') ) {
